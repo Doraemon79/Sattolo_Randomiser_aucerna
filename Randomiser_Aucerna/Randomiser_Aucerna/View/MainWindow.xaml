@@ -1,0 +1,26 @@
+﻿<Window x:Class="Randomiser_Aucerna.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Randomiser_Aucerna"
+        mc:Ignorable="d"
+         WindowStyle="None"
+        Title="MainWindow" Height="450" Width="870">
+    <Grid>
+        <Button x:Name="button" Content="Shuffle" HorizontalAlignment="Left" Height="66" Margin="30,30,0,0" VerticalAlignment="Top" Width="170"
+                Command="{Binding Path=ShuffleCommand}"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="363" Margin="240,30,0,0" VerticalAlignment="Top" Width="130"
+                ItemsSource="{Binding Items}" IsSynchronizedWithCurrentItem="True" SelectionChanged="listBox_SelectionChanged" />
+        <Button x:Name="button1" Content="Show in Textbox" HorizontalAlignment="Left" Height="66" Margin="410,30,0,0" VerticalAlignment="Top" Width="170"
+                  Command="{Binding Path=ShowInTextBoxCommand, Mode=OneWay}" IsEnabled="{Binding Path=ShowTextIsEnabledBool, Mode=OneWay}"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="363" Margin="630,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"
+              Text="{Binding Path=TextItems}" IsReadOnly="True"/>
+        <Button x:Name="button2" Content="Reset to Starting Array" HorizontalAlignment="Left" Height="66" Margin="30,327,0,0" VerticalAlignment="Top" Width="170"
+                Command="{Binding Path=ResetArrayCommand}" />
+        <Button x:Name="button3" Content="Close" HorizontalAlignment="Left" Height="46" Margin="791,10,0,0" VerticalAlignment="Top" Width="46" Click="button3_Click"/>
+        <Label x:Name="label" Content="Show in textbox &#10; Does NOT Shuffle, just show the &#10;current array. It takes longer but  you &#10;can copy the values with CTRL+C.&#10;Useful to check the results with Excel" HorizontalAlignment="Left" Height="119" Margin="410,118,0,0" VerticalAlignment="Top" Width="215"/>
+        <Label x:Name="label1" Content="Shuffle the start array.&#10;After it is shuffled you can click on&#10; ''Show in Textbox'' to have a &#10;copyable version" HorizontalAlignment="Left" Height="75" Margin="30,118,0,0" VerticalAlignment="Top" Width="205"/>
+        <Label x:Name="label2" Content="Reset the Array to its starting &#10;ordered state" HorizontalAlignment="Left" Height="44" Margin="30,398,0,0" VerticalAlignment="Top" Width="170"/>
+    </Grid>
+</Window>
