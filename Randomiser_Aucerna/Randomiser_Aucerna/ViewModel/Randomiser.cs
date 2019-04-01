@@ -1,22 +1,17 @@
 ﻿using Randomiser_Aucerna.ViewModel.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Randomiser_Aucerna.ViewModel
 {
     public class Randomiser : IRandomiser
     {
         private Random rnd = new Random();
-
-
-
+        
+        #region Constructors
         public Randomiser()
         {
         }
-
+        #endregion
         #region Methods
         // Custom Shuffle function 
         // I am using a personal implementation of Sattolo´s algorithm, on the contrary

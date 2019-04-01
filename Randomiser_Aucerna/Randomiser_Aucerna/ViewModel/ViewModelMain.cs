@@ -2,11 +2,7 @@
 using Randomiser_Aucerna.Model.Interfaces;
 using Randomiser_Aucerna.ViewModel.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Randomiser_Aucerna.ViewModel
 {

@@ -1,22 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.ComponentModel;
 
 namespace Randomiser_Aucerna
 {
+    /// <summary>
+    /// Base class for the other ViewModelBases
+    /// usuallz I make it more complex, in this case I just need to implement Inotifzpropertychanged
+    /// </summary>
     class ViewModelBase : INotifyPropertyChanged
     {
+        /// <summary>
+        /// raise the event of PropertyChanged
+        /// </summary>
+        /// <param name="prop"></param>
         internal void RaisePropertyChanged(string prop)
         {
             if (PropertyChanged != null) { PropertyChanged(this, new PropertyChangedEventArgs(prop)); }
         }
+        // Declare the event
         public event PropertyChangedEventHandler PropertyChanged;
 
-
+        /// <summary>
+        /// OnPropertyChanged method to raise the event of property changed
+        /// </summary>
+        /// <param name="propertyname"></param>
         private void OnPropertyChanged(string propertyname)
         {
             if (PropertyChanged != null)
@@ -25,25 +31,7 @@ namespace Randomiser_Aucerna
             }
         }
 
-        bool? _CloseWindowFlag;
-        public bool? CloseWindowFlag
-        {
-            get { return _CloseWindowFlag; }
-            set
-            {
-                _CloseWindowFlag = value;
-                RaisePropertyChanged("CloseWindowFlag");
-            }
-        }
-        public virtual void CloseWindow(bool? result = true)
-        {
-            Application.Current.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Background, new Action(() =>
-            {
-                CloseWindowFlag = CloseWindowFlag == null
-                    ? true
-                    : !CloseWindowFlag;
-            }));
-        }
+
     }
 }
 
