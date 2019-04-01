@@ -1,7 +1,0 @@
-C:\Users\ignle\source\repos\testcons\testcons\obj\Debug\testcons.csprojAssemblyReference.cache
-C:\Users\ignle\source\repos\testcons\testcons\obj\Debug\testcons.csproj.CoreCompileInputs.cache
-C:\Users\ignle\source\repos\testcons\testcons\bin\Debug\testcons.exe.config
-C:\Users\ignle\source\repos\testcons\testcons\bin\Debug\testcons.exe
-C:\Users\ignle\source\repos\testcons\testcons\bin\Debug\testcons.pdb
-C:\Users\ignle\source\repos\testcons\testcons\obj\Debug\testcons.exe
-C:\Users\ignle\source\repos\testcons\testcons\obj\Debug\testcons.pdb
